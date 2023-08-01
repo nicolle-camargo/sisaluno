@@ -68,29 +68,29 @@
         <div class="column" style="background-color:#2A9D8F;"><center><h3>Aluno</h3></center>
         <p> </p>
         <center>
-        <button class="btn  "><a href="../cadaluno.php">Cadastrar Aluno(a)</a></button>
+        <button class="btn  "><a href="./aluno/cadaluno.php">Cadastrar Aluno(a)</a></button>
     
         <p> </p>
-        <button class="btn "><a href="../listaaluno.php">Lista dos Alunos</a></button>
+        <button class="btn "><a href="./aluno/listaaluno.php">Lista dos Alunos</a></button>
         </center></div>
         
         <div class="column" style="background-color:#E9C46A;"><center><h3>Professor</h3></center>
         <p> </p>
         <center>
-        <button class="btn  "><a href="../cadprof.php">Cadastrar Professor(a)</a></button>
+        <button class="btn  "><a href="./professor/cadprof.php">Cadastrar Professor(a)</a></button>
     
         <p> </p>
-        <button class="btn "><a href="../listaprofs.php">Lista dos Professores</a></button>
+        <button class="btn "><a href="./professor/php">Lista dos Professores</a></button>
         </center>
 
     </div>
         <div class="column" style="background-color:#E76F51;"><center><h3>Disciplina</h3></center>
         <p> </p>
         <center>
-        <button class="btn  "><a href="../caddisciplina.php">Cadastrar Disciplina</a></button>
+        <button class="btn  "><a href="./disciplina/caddisciplina.php">Cadastrar Disciplina</a></button>
     
         <p> </p>
-        <button class="btn "><a href="../listadisciplina.php">Lista de Disciplinas</a></button>
+        <button class="btn "><a href="./disciplina/listadisciplina.php">Lista de Disciplinas</a></button>
         </center>
     </div></div></div>
 
