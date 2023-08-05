@@ -57,7 +57,7 @@ if(isset($_POST['update'])){
     $id = $_POST["id"];
    
     ##codigo sql
-    $sql = "UPDATE Disciplina SET nomedisciplina= :nomedisciplina,
+    $sql = "UPDATE disciplina SET nomedisciplina= :nomedisciplina,
                                  ch= :ch,
                                  semestre= :semestre,
                                  idprofessor= :idprofessor
@@ -80,13 +80,13 @@ if(isset($_POST['update'])){
             echo "<center>A Disciplina <strong>$nomedisciplina</strong> foi Alterada com Sucesso!!!"; 
             echo "<p> </p>";
             echo "<button class='btn btn-defautl'><a href='listadisciplina.php'>Voltar à Lista</a></button>";
-            echo "   <button class='btn btn-defautl'><a href='index.php'>Voltar ao Início</a></button>";
+            echo "   <button class='btn btn-defautl'><a href='../index.php'>Voltar ao Início</a></button>";
         }
     }
 
 function excluirdisciplina($conexao, $id) {
     try {
-        $sql = "DELETE FROM `Disciplina` WHERE id = :id";
+        $sql = "DELETE FROM `disciplina` WHERE id = :id";
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conexao->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
