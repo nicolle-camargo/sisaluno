@@ -9,13 +9,18 @@
   <title>Formulário de Cadastro</title>
 
   <style>
-    * {
-      margin: 10px;
+    body{
       background-color: #f1f1f1;
+      padding: 30px;
+ 
     }
 
     h1{
       color: #2A9D8F;
+    }
+
+    form{
+      padding-left: 10px;
     }
 
   </style>
@@ -23,7 +28,8 @@
 
 <body>
   <h1>  Cadastro de Aluno(a)</h1>
-  <form class="row g-3" method="GET" action="crudaluno.php"> 
+  <p>  </p> 
+  <form class="row g-3" method="GET" action="crudaluno.php">
     <div class="col-md-6">
       <label for="" class="form-label">Nome:</label>
       <input type="text" name="nome" class="form-control" id="inputEmail4" required placeholder="Digite seu nome completo" maxlength="100">
@@ -46,20 +52,22 @@
     </div>
 
     <div class="col-md-5">
-      <label for="inputState" name="status" class="form-label">Status:</label>
-      <select id="inputState" class="form-select" name="status" required placeholder="Selecione">
+      <label for="inputState" name="estatus" class="form-label">Estatus:</label>
+      <select id="inputState" class="form-select" name="estatus" required placeholder="Selecione">
         <option>AT</option>
         <option>NA</option>
       </select>
     </div>
+    </form>
 
     <div class="col-12">
+    <p>  </p>
     <center><button type="submit" style= "background-color: #2A9D8F" class="btn" name="cadastrar" value="cadastrar">Cadastrar</button> 
     <button class='btn'><a href='../index.php'>Voltar ao Início</a></button>
     </center>
 
     </div>
-  </form>
+  
 </body>
 
 </html>
