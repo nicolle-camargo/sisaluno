@@ -10,13 +10,18 @@
   <title>Alterar Professor(a)</title>
 
   <style>
-    * {
-      margin: 10px;
+    body{
       background-color: #f1f1f1;
+      padding: 30px;
+ 
     }
 
     h1{
       color: #E9C46A;
+    }
+
+    form{
+      padding-left: 10px;
     }
   </style>
 </head>
@@ -48,43 +53,45 @@
    $idade = $array_retorno['idade'];
    $datanascimento = $array_retorno['datanascimento'];
    $endereco = $array_retorno['endereco'];
-   $status = $array_retorno['status'];
+   $estatus = $array_retorno['estatus'];
 ?>
 
 
   <h1>Alterar Professor(a)</h1>
+  <p>  </p>
   <form class="row g-3" method="POST" action="crudprof.php"> 
 
-  <input type="hidden" required name="id" id="" value="<?php echo $id; ?>" >
+  <input type="hidden" required name="id" id="" value='<?php echo $id; ?>' >
     <div class="col-md-6">
       <label for="" class="form-label">Nome:</label>
-      <input type="text" required name="nome" maxlength="100" class="form-control" id="inputEmail4" value=<?php echo $nome ?> >
+      <input type="text" required name="nome" maxlength="100" class="form-control" id="inputEmail4" value='<?php echo $nome ?>' >
     </div>
 
     <div class="col-md-2">
       <label for="" required class="form-label">Idade:</label>
-      <input type="number" required name="idade" min='18' max='120' class="form-control" id="inputEmail4" value=<?php echo $idade ?>>
+      <input type="number" required name="idade" min='18' max='120' class="form-control" id="inputEmail4" value='<?php echo $idade ?>'>
     </div>
     
     <div class="col-md-2">
       <label for="" class="form-label">Data de nascimento:</label>
-      <input type="date" required name="datanascimento" class="form-control" id="inputEmail4" value=<?php echo $datanascimento ?> >
+      <input type="date" required name="datanascimento" class="form-control" id="inputEmail4" value='<?php echo $datanascimento ?>' >
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-6">
       <label for=""  class="form-label">Endereço:</label>
-      <input type="text" required name="endereco" maxlength="100" class="form-control" id="inputEmail4" value=<?php echo $endereco ?>>
+      <input type="text" required name="endereco" maxlength="100" class="form-control" id="inputEmail4" value='<?php echo $endereco ?>'>
     </div>  
 
     <div class="col-md-4">
-      <label for="inputState" name="status" class="form-label" value=<?php echo $status ?> >Status:</label>
-      <select id="inputState" required class="form-select" value=<?php echo $status ?> name="status" >
+      <label for="inputState" name="estatus" class="form-label" value='<?php echo $estatus ?>' >Estatus:</label>
+      <select id="inputState" required class="form-select" value='<?php echo $estatus ?>' name="estatus" >
         <option>AT</option>
         <option>NA</option>
       </select>
     </div>
 
     <div class="col-12">
+    <p>  </p>
       <center><button type="submit" class="btn btn-warning" name="update" value="Alterar">Alterar  <button class='btn btn-default'><a href='listaprofs.php'>Cancelar</a></button></center>
     </div></center>
     </div>
