@@ -10,13 +10,18 @@
   <title>Alterar Disciplina</title>
 
   <style>
-    * {
-      margin: 10px;
+    body{
       background-color: #f1f1f1;
+      padding: 30px;
+ 
     }
 
     h1{
       color: #E76F51;
+    }
+
+    form{
+      padding-left: 10px;
     }
   </style>
 </head>
@@ -52,22 +57,23 @@
 
 
   <h1>Alterar Disciplina</h1>
+  <p>  </p>
   <form class="row g-3" method="POST" action="cruddisciplina.php"> 
 
-  <input type="hidden" required name="id" id="" value="<?php echo $id; ?>" >
+  <input type="hidden" required name="id" id="" value='<?php echo $id; ?>' >
     <div class="col-md-6">
       <label for="" class="form-label">Nome:</label>
-      <input type="text" required name="nomedisciplina" class="form-control" id="inputEmail4" maxlength="100" value=<?php echo $nomedisciplina ?> >
+      <input type="text" required name="nomedisciplina" class="form-control" id="inputEmail4" maxlength="100" value='<?php echo $nomedisciplina ?>' >
     </div>
 
-    <div class="col-md-2">
+    <div class="col-md-5">
       <label for="" required class="form-label">Carga Horária:</label>
-      <input type="text" required placeholder="Formato: 00h" min='2' name="ch" class="form-control" id="inputEmail4" value=<?php echo $ch ?>>
+      <input type="text" required placeholder="Formato: 00h" min='2' name="ch" class="form-control" id="inputEmail4" value='<?php echo $ch ?>'>
     </div>
     
     <div class="col-md-5">
       <label for="" class="form-label">Semestre:</label>
-      <select id="inputState" class="form-select" value=<?php echo $semestre ?> name="semestre" required>
+      <select id="inputState" class="form-select" value='<?php echo $semestre ?>' name="semestre" required>
         <option>1/6</option>
         <option>2/6</option>
         <option>3/6</option>
@@ -77,13 +83,14 @@
         </select>
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-6">
       <label for=""  class="form-label">ID do(a) Professor(a):</label>
-      <input type="number" required name="idprofessor" class="form-control" id="inputEmail4" value=<?php echo $idprofessor ?>>
+      <input type="number" required name="idprofessor" class="form-control" id="inputEmail4" value='<?php echo $idprofessor ?>'>
     </div>  
 
 
     <div class="col-12">
+    <p>  </p>
       <center><button type="submit"  style= "background-color: #E76F51" class="btn" name="update" value="Alterar">Alterar   <button class='btn btn-default'><a href='listadisciplina.php'>Cancelar</a></button></center>
     </div>
   </form>
