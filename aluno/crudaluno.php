@@ -23,13 +23,13 @@ if(isset($_GET['cadastrar'])){
         $idade = $_GET["idade"];
         $datanascimento = $_GET["datanascimento"];
         $endereco = $_GET["endereco"];
-        $status = $_GET["status"];
+        $estatus = $_GET["estatus"];
 
         $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 
         ##codigo SQL
-        $sql = "INSERT INTO aluno(nome, idade, datanascimento, endereco, status) 
-                VALUES('$nome', '$idade', '$datanascimento', '$endereco', '$status')";
+        $sql = "INSERT INTO aluno(nome, idade, datanascimento, endereco, estatus) 
+                VALUES('$nome', '$idade', '$datanascimento', '$endereco', '$estatus')";
 
         ##junta o codigo sql a conexao do banco
         $sqlcombanco = $conexao->prepare($sql);
@@ -54,15 +54,15 @@ if(isset($_POST['update'])){
     $idade = $_POST["idade"];
     $datanascimento = $_POST["datanascimento"];
     $endereco = $_POST["endereco"];
-    $status = $_POST["status"];
+    $estatus = $_POST["estatus"];
     $id = $_POST["id"];
    
     ##codigo sql
-    $sql = "UPDATE Aluno SET nome= :nome,
+    $sql = "UPDATE aluno SET nome= :nome,
                                  idade= :idade,
                                  datanascimento= :datanascimento,
                                  endereco= :endereco,
-                                 status= :status
+                                 estatus= :estatus
                                  WHERE id= :id";
 
     ##junta o codigo sql a conexao do banco
@@ -74,7 +74,7 @@ if(isset($_POST['update'])){
     $stmt->bindParam(':idade',$idade, PDO::PARAM_INT);
     $stmt->bindParam(':datanascimento',$datanascimento, PDO::PARAM_STR);
     $stmt->bindParam(':endereco',$endereco, PDO::PARAM_STR);
-    $stmt->bindParam(':status',$status, PDO::PARAM_STR);
+    $stmt->bindParam(':estatus',$estatus, PDO::PARAM_STR);
     $stmt->execute();
 
     if($stmt->execute())
@@ -89,7 +89,7 @@ if(isset($_POST['update'])){
 
 function excluiraluno($conexao, $id) {
     try {
-        $sql = "DELETE FROM `Aluno` WHERE id = :id";
+        $sql = "DELETE FROM `aluno` WHERE id = :id";
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conexao->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
