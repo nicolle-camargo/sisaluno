@@ -25,13 +25,13 @@
     background-color:white;
   }
 
-  h1{
+  h2{
     color: #E76F51;
   }
 </style>
 
 <div class="container mt-3">
-  <h1>Lista de Disciplinas</h1>
+  <h2><strong>Lista de Disciplinas</strong></h2>
   
   <table class="table table-bordered">
     <thead>
@@ -41,8 +41,8 @@
         <th>Carga Horária</th>
         <th>Semestre</th>
         <th>ID Professor</th>
-        <th>Alterar</th>
-        <th>Excluir</th>
+        <th><center>Alterar</center></th>
+        <th><center>Excluir</center></th>
       </tr>
     </thead>
 
@@ -58,15 +58,19 @@
 
                             <td>
                                <form method="POST" action="altdisciplina.php">
+                               <center>
                                         <input name="id" type="hidden" value="<?php echo $value['id'];?>"/>
                                         <button class= btn btn-warning name="update"  type="submit">Alterar</button>
+                    </center>
                                 </form>
                              </td> 
 
                              <td>
                                <form method="GET" action="cruddisciplina.php">
+                               <center>
                                         <input name="id" type="hidden" value="<?php echo $value['id'];?>"/>
                                         <button name="excluir" class= btn btn-warning type="submit">Excluir</button>
+                    </center>
      
                                 </form>
 
