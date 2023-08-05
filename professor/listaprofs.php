@@ -25,13 +25,13 @@
     background-color:white;
   }
 
-  h1{
+  h2{
     color: #E9C46A;
   }
 </style>
 
 <div class="container mt-3">
-  <h1>Lista de Professores</h1>
+  <h2><strong>Lista de Professores</strong></h2>
   
   <table class="table table-bordered">
     <thead>
@@ -41,9 +41,9 @@
         <th>Idade</th>
         <th>Data de nascimento</th>
         <th>Endereço</th>
-        <th>Status</th>
-        <th>Alterar</th>
-        <th>Excluir</th>
+        <th>Estatus</th>
+        <th><center>Alterar</center></th>
+        <th><center>Excluir</center></th>
       </tr>
     </thead>
 
@@ -56,20 +56,23 @@
                             <td> <?php echo $value['idade']?>  </td> 
                             <td> <?php echo $value['datanascimento']?> </td>
                             <td> <?php echo $value['endereco']?> </td>
-                            <td> <?php echo $value['status']?> </td>
+                            <td> <?php echo $value['estatus']?> </td>
 
                             <td>
                                <form method="POST" action="altprof.php">
+                               <center>
                                         <input name="id" type="hidden" value="<?php echo $value['id'];?>"/>
                                         <button class= btn btn-warning name="update"  type="submit">Alterar</button>
+                    </center>
                                 </form>
                              </td> 
 
                              <td>
                                <form method="GET" action="crudprof.php">
+                               <center>
                                         <input name="id" type="hidden" value="<?php echo $value['id'];?>"/>
                                         <button name="excluir" class= btn btn-warning type="submit">Excluir</button>
-     
+                    </center>
                                 </form>
 
                              </td>    
