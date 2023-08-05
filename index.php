@@ -24,6 +24,7 @@
             padding: 30px;
             text-align: center;
             font-size: 35px;
+            height: 150px;
         }
 
         .row {
@@ -35,13 +36,17 @@
             padding-bottom: 10px;
         }
 
+        .row img{
+            height:100px;
+        }
+
 
         .column {
             -webkit-flex: 1;
             -ms-flex: 1; /*funcionar em diferentes navegadores*/
             flex: 1;
             padding: 10px;
-            height: 550px;
+            height: 520px;
         }
 
         .footer {
@@ -72,7 +77,9 @@
     
         <p> </p>
         <button class="btn "><a href="./aluno/listaaluno.php">Lista dos Alunos</a></button>
-        </center></div>
+    </center>
+    </div>
+        
         
         <div class="column" style="background-color:#E9C46A;"><center><h3>Professor</h3></center>
         <p> </p>
@@ -80,7 +87,7 @@
         <button class="btn  "><a href="./professor/cadprof.php">Cadastrar Professor(a)</a></button>
     
         <p> </p>
-        <button class="btn "><a href="./professor/php">Lista dos Professores</a></button>
+        <button class="btn "><a href="./professor/listaprofs.php">Lista dos Professores</a></button>
         </center>
 
     </div>
